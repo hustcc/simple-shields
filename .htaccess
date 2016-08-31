@@ -1,0 +1,5 @@
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+RewriteRule ^([0-9a-zA-Z]{1,})-([0-9a-zA-Z]{1,})-([a-zA-Z]{1,20}|[a-f0-9]{3}|[a-f0-9]{6}).svg$ api.php?subject=$1&status=$2&color=$3

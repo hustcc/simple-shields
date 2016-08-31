@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title> Shields Service: Quality metadata badges for open source projects </title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="We serve fast and scalable informational images as badges for GitHub, Travis CI, Jenkins, WordPress and many more services. Use them to track the state of your projects, or for promotional purposes.">
+	<link rel="icon" type="image/png" href="favicon.png">
+	<style>
+		@font-face {
+		  font-family: 'Lekton';
+		  font-style: normal;
+		  font-weight: 400;
+		  src: local('Lekton'), local('Lekton-Regular'), url(http://fonts.gstatic.com/s/lekton/v7/8AKkQS1IQ0T_1VSlqD3lcfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+		  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+		}
+		@font-face {
+		  font-family: 'Lekton';
+		  font-style: normal;
+		  font-weight: 400;
+		  src: local('Lekton'), local('Lekton-Regular'), url(http://fonts.gstatic.com/s/lekton/v7/GY6PlTlcpI9OWorXeq8Mhg.woff2) format('woff2');
+		  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+		}
+
+		html { background-attachment: fixed;
+		  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iNDgwIj48ZmlsdGVyIGlkPSJhIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii4wOCIgbnVtT2N0YXZlcz0iOCIgc3RpdGNoVGlsZXM9InN0aXRjaCIgc2VlZD0iMzQ2Ii8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPSIxIDAgMCAwIDAgIDEgMCAwIDAgMCAgMSAwIDAgMCAuOSAgLjAxIDAgMCAwIC4wMSIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIvPjwvc3ZnPg==);
+		}
+		:root { text-align: center; font-family: Lekton, sans-serif; color: #534; }
+		code, .code { font-family: Lekton; white-space: pre-wrap; padding: 0 4px;
+		  background: #eef; border-radius: 4px; }
+		input.short { width: 5em; }
+		input { text-align: center; border: solid #b9a; color: #534; border-width: 0 0 1px 0;
+		  width: 40%; height: 15px; padding: 0; background-color: transparent; }
+		input:focus { outline: 0; }
+		hr { width: 40%; border-width: 1px 0 0 0; }
+		a.photo { text-decoration: none; }
+		a.photo>img { padding: 2px; border: 1px solid grey; }
+		ul { text-align: left; margin-left: 25%; }
+		h1, h2, h3 { font-style: italic; }
+		h2::before { content: '☙ '; }
+		h2::after { content: ' ❧'; }
+		h2 { margin-top: 12mm; font-variant: small-caps; }
+		hr.spacing { border: 0; display: block; height: 3mm; }
+		.highlights { font-style: italic; }
+		#main { transition: filter 1s, -webkit-filter 1s; }
+		#main.blur { filter: url(#gaussian-blur); filter: blur(1px); -webkit-filter: blur(1px); }
+	</style>
+
+</head>
+<body>
+	<main id="main">
+		<h1 alt="Shields Service">Shields Service</h1>
+		<p>
+			Shields Service with PHP. Inspired by Shields IO.
+		</p>
+		<p class="highlights">
+			Pixel-perfect &nbsp; Retina-ready &nbsp; Fast &nbsp; Consistent &nbsp; Hackable &nbsp; No tracking
+		</p>
+
+		<h2> Your Badges </h2>
+		<form action="javascript:makeImage()" id="imageMaker">
+		  <input class="short" name="subject" placeholder="subject">
+		  <input class="short" name="status" placeholder="status">
+		  <input class="short" name="color" list="default-colors" placeholder="color">
+		  <datalist id="default-colors">
+		    <option value="brightgreen">
+		    </option><option value="green">
+		    </option><option value="yellowgreen">
+		    </option><option value="yellow">
+		    </option><option value="orange">
+		    </option><option value="red">
+		    </option><option value="lightgrey">
+		    </option><option value="blue">
+		  </option></datalist>
+		  <button>Make Shields</button>
+		</form>
+
+		<p>
+			<code><span id="imgUrlPrefix">http://shields.hust.cc/</span>&lt;SUBJECT&gt;/&lt;STATUS&gt;/&lt;COLOR&gt;.svg</code>
+		</p>
+
+		<hr class="spacing">
+		<h2> Color Style </h2>
+		<p>
+			<img src="http://shields.hust.cc/color-brightgreen-brightgreen.svg" alt="brightgreen">
+			<img src="http://shields.hust.cc/color-green-green.svg" alt="green">
+			<img src="http://shields.hust.cc/color-yellowgreen-yellowgreen.svg" alt="yellowgreen">
+			<img src="http://shields.hust.cc/color-yellow-yellow.svg" alt="yellow">
+			<img src="http://shields.hust.cc/color-orange-orange.svg" alt="orange">
+			<img src="http://shields.hust.cc/color-red-red.svg" alt="red">
+			<img src="http://shields.hust.cc/color-lightgrey-lightgrey.svg" alt="lightgrey">
+			<img src="http://shields.hust.cc/color-blue-blue.svg" alt="blue">
+			<img src="http://shields.hust.cc/color-ff69b4-ff69b4.svg" alt="ff69b4">
+		</p>
+
+		<hr class="spacing">
+		<h2> Like This? </h2>
+		<p>
+			Tell your favorite badge service to use it! <br>
+			And tell us, we might be able to bring it to you anyway! Code is <a href="https://github.com/hustcc/simple-shields">here</a>
+		</p>
+	</main>
+	<script type="text/javascript">
+		function makeImage() {
+			var url = document.getElementById('imgUrlPrefix').textContent;
+			url += escapeField(imageMaker.subject.value);
+			url += '-' + escapeField(imageMaker.status.value);
+			url += '-' + escapeField(imageMaker.color.value);
+			url += '.svg';
+			document.location = url;
+		}
+		function escapeField(s) {
+  		return encodeURIComponent(s.replace(/-/g, '--').replace(/_/g, '__'));
+		}
+	</script>
+</body>
+</html>
