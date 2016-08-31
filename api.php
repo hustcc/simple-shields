@@ -10,7 +10,7 @@ function measureTextWidth($text) {
 function textColor($color_name) {
 	$colors = array(
 		'red' => 'e05d44',
-		'orande' => 'fe7d37',
+		'orange' => 'fe7d37',
 		'yellow' => 'dfb317',
 		'brightgreen' => '4c1',
 		'green' => '97ca00',
