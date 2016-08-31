@@ -8,7 +8,7 @@
 
  - Pixel-perfect, Retina-ready, Fast, Consistent, Hackable, No tracking.
  - Really Simple, only one PHP file with 60 rows.
- - Easy deploy, Apache or nginx.
+ - Easy deploy and stable, Apache or nginx.
 
 
 ## 1. How to Use ?
