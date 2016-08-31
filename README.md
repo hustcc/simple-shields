@@ -4,11 +4,12 @@
 
 ![http://shields.hust.cc/](http://shields.hust.cc/Shields-Perfect-green.svg)
 ![http://shields.hust.cc/](http://shields.hust.cc/Shields-Simple-yellow.svg)
+![http://shields.hust.cc/](http://shields.hust.cc/Shields-Stable-blue.svg)
 ![http://shields.hust.cc/](http://shields.hust.cc/Shields-EasyDeploy-ff69b4.svg)
 
  - Pixel-perfect, Retina-ready, Fast, Consistent, Hackable, No tracking.
  - Really Simple, only one PHP file with 60 rows.
- - Easy deploy and stable, Apache or nginx.
+ - Easy deploy and Stable, Apache or nginx.
 
 
 ## 1. How to Use ?
