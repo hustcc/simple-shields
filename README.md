@@ -8,6 +8,10 @@
 ![http://shields.hust.cc/](http://shields.hust.cc/Shields-Stable-blue.svg)
 ![http://shields.hust.cc/](http://shields.hust.cc/Shields-EasyDeploy-ff69b4.svg)
 
+
+![http://shields.hust.cc/](http://shields.hust.cc/亲爱的-么么哒-orange.svg)
+![http://shields.hust.cc/](http://shields.hust.cc/Hustcc-( ˘ ³˘)♥-ff69b4.svg)
+
  - **Shields.IO style**. Pixel-perfect, Retina-ready, Fast, Consistent, Hackable, No tracking.
  - Really **Simple**, only one PHP file with 60 rows, no dependence.
  - **Easy deploy** and **Stable**, Apache or nginx.
