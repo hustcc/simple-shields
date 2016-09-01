@@ -2,8 +2,12 @@
 header("Content-Type: image/svg+xml;charset=utf-8");
 
 function measureTextWidth($text) {
-	$bbox = imageftbbox(11, 0, 'verdana.ttf', $text);
-	return $bbox[2] - $bbox[0];
+	$strlen = strlen($text); // unicode = 3
+	$mb_strlen = mb_strlen($text, 'UTF-8');
+	$unicode_len = ($strlen - $mb_strlen) / 2;
+	$char_len = $mb_strlen - $unicode_len;
+
+	return $unicode_len * 12 + $char_len * 8;
 }
 
 // color name 2 color rgb
@@ -36,11 +40,14 @@ if ($color_tmp) {
 $subject_width = measureTextWidth($subject);
 $status_width = measureTextWidth($status);
 
-$left_width = $subject_width; // ignore all the margin and gap
-$right_width = $status_width;
+$margin = 4; // left right
+$gap = 2; // center
 
-$subject_x = $left_width / 2; // ignore all the margin and gap
-$status_x = $left_width + $right_width / 2;
+$left_width = $subject_width + $margin + $gap; // margin(4) + gap(2)
+$right_width = $status_width + $margin + $gap; // margin(4) + gap(2)
+
+$subject_x = $subject_width / 2 + $margin; // margin(4)
+$status_x = $subject_width + $status_width / 2 + $margin + $gap * 2; // margin(4) + gap(2) * 2
 
 $width = $left_width + $right_width;
 
