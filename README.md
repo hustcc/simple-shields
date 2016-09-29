@@ -19,7 +19,7 @@
 
 ## 1. How to Use ?
 
-> The url format: **http://shields.hust.cc/<SUBJECT>-<STATUS>-<COLOR>.svg**
+> The url format: **http://shields.hust.cc/SUBJECT-STATUS-COLOR.svg**
 
 - **subject**: the left part TEXT of shields.
 - **status**: the right part TEXT of shields.
@@ -33,7 +33,7 @@
 3. **optional step**: Config the url rewrite. use `.htaccess` on apache([here is the file](.htaccess)), use `location config` on nginx([here is the file](nginx-shields.conf)).
 4. Binding you domain.
 
-**MEMO**: if you don't rewrite url, you can use **http://you-domain/api.php?subject=<SUBJECT>&status=<STATUS>&color=<COLOR>**
+**MEMO**: if you don't rewrite url, you can use **http://you-domain/api.php?subject=SUBJECT&status=STATUS&color=COLOR**
 
 
 ## 3. Contribution
