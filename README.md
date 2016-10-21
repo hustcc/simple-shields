@@ -47,4 +47,4 @@ Thanks for Shields IO, inspired by it. The 404 page from internet.
 
 ## LICENSE
 
-MIT
+MIT@hustcc
