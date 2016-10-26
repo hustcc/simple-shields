@@ -1,6 +1,8 @@
 <?php
 header("Content-Type: image/svg+xml;charset=utf-8");
 
+putenv('GDFONTPATH=' . realpath('.'));
+
 function measureTextWidth($text) {
 	$bbox = imagettfbbox(11.0, 0, 'verdana.ttf', $text);
 	return $bbox[4] - $bbox[0];
